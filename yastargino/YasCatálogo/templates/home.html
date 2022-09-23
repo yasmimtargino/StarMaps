@@ -1,81 +1,20 @@
-{% load static %}
-<html>
-    <head>
-        <title> StarMaps </title>
-        <link rel = "stylesheet" href="{%static 'css/style.css'%}">
-    </head>
-<h1 class="colore"> Olá, sejam bem-vindos ao StarMaps :) </h1>
-</html>  
-<html lang="pt-br">
-    
-
-<head>
-    <script language=javascript type="text/javascript">
-        function openPop() {
-            document.getElementById('popup-container').style.display = 'block';
-        }
-        function closepop() {
-            document.getElementById('popup-container').style.display = 'none';
-        }
-   
-    </script>
-</head>
+{% extends 'main_template.html' %}
 
 
-<body>
-   
-    
-    <div class="col-100">
-        <div class="slide-principal">
-        </div>
-        
-        <div class="container-card">
-            <div class="card">
-                <div class="texto">
-                    <h2 class="text-main">Tênis Old Skool</h2>
-                    <p class="desc">R$ 349,990</p>
-                    <P class="desc"> ou 6x de R$58,33</P>
-                </div>
-                <div class="button-card">
-                    <button type="button" class="btn-card">Comprar</button>
-                </div>
-            </div>
-            <div class="card-meio">
-                    </a>
-                </div>
-                <div class="texto">
-                    <h2 class="text-main">Tênis Puma Carina Lux</h2>
-                    <p class="desc">R$ 279,00</p>
-                    <p class="desc">ou 10x de 27,99</p>
-                </div>
-                <div class="button-card">
-                    <button type="button" class="btn-card">Comprar</button>
-                </div>
-            </div>
-            <div class="card">
+{% block body %}
+    <br><a href="/cadastro/">>>>> Sing Up AQUI <<<<< </a>
+{% endblock %}
 
-                    </a>
-                </div>
-                <div class="texto">
-                    <h2 class="text-main">Tênis Nike Air Max 97 Masculino</h2>
-                    <p class="desc">R$ 349,00</p>
-                    <p class="desc"> ou 5x de 69,80  </p>
-                </div>
-                <div class="button-card">
-                    <button type="button" class="btn-card">Comprar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-   
+{% block cabecalho} 
+cabecalho da pagina {{variavel}}
+{% endblock}
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="./sitetenis.js"></script>    
-
-    <p style="text-align: center; font-family: sans-serif; color:
-     hwb(309 31% 15%); padding-top: 100px;">© Copyright 2022-. Todos os direitos não são reservados, pode usar como base.</p>
-   </footer>
-                   
-</body>
+{% block teste%}
+<div class="conteudo">
+    Teste de leitura <br>
+    {% for c in usuario %}
+        {{c.nome}} <br> 
+    {% endfor %}
+</div>
+  
+{% endblock %}

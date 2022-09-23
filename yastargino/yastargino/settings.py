@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-oo8v5xxr!tusnq-%4*%e41(bm3#w!l@pptayo@2hoy*m1!+bgv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', 'yasmimtargino.pythonanywhere.com']
 
 
 # Application definition
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'yastargino.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'StarMaps',
+        'USER': 'root',
+        'PASSWORD': 'Senai2019,',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
